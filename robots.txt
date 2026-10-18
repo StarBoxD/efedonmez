@@ -1,5 +1,14 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Favicon
+Allow: /
+
 Sitemap: https://efedonmez.com/sitemap.xml
 Host: https://efedonmez.com
