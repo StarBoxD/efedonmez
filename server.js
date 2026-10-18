@@ -14,18 +14,17 @@ const MIME_TYPES = {
   '.jpeg': 'image/jpeg',
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.xml': 'application/xml; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8',
+  '.webmanifest': 'application/manifest+json; charset=utf-8'
 };
 
 const server = http.createServer((req, res) => {
   let reqUrl = req.url.split('?')[0];
   if (reqUrl === '/' || reqUrl === '') reqUrl = '/index.html';
 
-  if (reqUrl === '/favicon.ico') {
-    res.writeHead(204);
-    res.end();
-    return;
-  }
+
   try {
     reqUrl = decodeURIComponent(reqUrl);
   } catch (e) {}

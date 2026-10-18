@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://efedonmez.com/sitemap.xml
+Host: https://efedonmez.com
