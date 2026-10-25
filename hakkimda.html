@@ -52,11 +52,73 @@
     <section id="view-about" class="fade-in">
       <div class="about-header">
         <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
-        <h1 class="shimmer-title" style="font-size: clamp(1.8rem, 4vw, 2.4rem);">Hakkımda</h1>
+        <h1 class="shimmer-title" style="font-size: clamp(1.8rem, 4vw, 2.4rem);">Hakkımda & Sıralamalar</h1>
       </div>
 
-      <!-- Kişisel detaylar alanı (renk, film vb. için hazır boş konteyner) -->
-      <div class="about-content" id="about-content"></div>
+      <!-- Sıralama ve Favori Kutuları -->
+      <div class="favorites-grid stagger-item" style="--delay: 0.1s">
+        
+        <!-- Kutu 1: Sevdiğim Renkler -->
+        <div class="fav-card">
+          <div class="fav-card-header">
+            <span class="fav-icon">🎨</span>
+            <h2 class="fav-title">Sevdiğim Renkler</h2>
+          </div>
+          <div class="fav-list">
+            <div class="fav-item">
+              <span class="rank-badge">01</span>
+              <span class="color-dot" style="background: #6366f1;"></span>
+              <span class="fav-item-name">Renk #1</span>
+            </div>
+            <div class="fav-item">
+              <span class="rank-badge">02</span>
+              <span class="color-dot" style="background: #06b6d4;"></span>
+              <span class="fav-item-name">Renk #2</span>
+            </div>
+            <div class="fav-item">
+              <span class="rank-badge">03</span>
+              <span class="color-dot" style="background: #10b981;"></span>
+              <span class="fav-item-name">Renk #3</span>
+            </div>
+            <div class="fav-item">
+              <span class="rank-badge">04</span>
+              <span class="color-dot" style="background: #a855f7;"></span>
+              <span class="fav-item-name">Renk #4</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kutu 2: Sevdiğim Filmler -->
+        <div class="fav-card">
+          <div class="fav-card-header">
+            <span class="fav-icon">🎬</span>
+            <h2 class="fav-title">Sevdiğim Filmler</h2>
+          </div>
+          <div class="fav-list">
+            <div class="fav-item">
+              <span class="rank-badge">01</span>
+              <span class="fav-item-name">Film Adı #1</span>
+              <span class="fav-tag">Tür / Yıl</span>
+            </div>
+            <div class="fav-item">
+              <span class="rank-badge">02</span>
+              <span class="fav-item-name">Film Adı #2</span>
+              <span class="fav-tag">Tür / Yıl</span>
+            </div>
+            <div class="fav-item">
+              <span class="rank-badge">03</span>
+              <span class="fav-item-name">Film Adı #3</span>
+              <span class="fav-tag">Tür / Yıl</span>
+            </div>
+            <div class="fav-item">
+              <span class="rank-badge">04</span>
+              <span class="fav-item-name">Film Adı #4</span>
+              <span class="fav-tag">Tür / Yıl</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
