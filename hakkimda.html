@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
   <meta name="theme-color" content="#050508" />
-  <meta name="description" content="Efe Dönmez - Hakkımda." />
+  <meta name="description" content="Efe Dönmez - Hakkımda & Kişisel Favoriler." />
   <link rel="canonical" href="https://efedonmez.com/hakkimda.html" />
   <link rel="manifest" href="site.webmanifest" />
   <title>Hakkımda — Efe Dönmez | efedonmez.com</title>
@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/bento.css" />
   <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
@@ -52,73 +53,11 @@
     <section id="view-about" class="fade-in">
       <div class="about-header">
         <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
-        <h1 class="shimmer-title" style="font-size: clamp(1.8rem, 4vw, 2.4rem);">Hakkımda & Sıralamalar</h1>
+        <h1 class="shimmer-title" style="font-size: clamp(1.8rem, 4vw, 2.4rem);">Hakkımda</h1>
       </div>
 
-      <!-- Sıralama ve Favori Kutuları -->
-      <div class="favorites-grid stagger-item" style="--delay: 0.1s">
-        
-        <!-- Kutu 1: Sevdiğim Renkler -->
-        <div class="fav-card">
-          <div class="fav-card-header">
-            <span class="fav-icon">🎨</span>
-            <h2 class="fav-title">Sevdiğim Renkler</h2>
-          </div>
-          <div class="fav-list">
-            <div class="fav-item">
-              <span class="rank-badge">01</span>
-              <span class="color-dot" style="background: #6366f1;"></span>
-              <span class="fav-item-name">Renk #1</span>
-            </div>
-            <div class="fav-item">
-              <span class="rank-badge">02</span>
-              <span class="color-dot" style="background: #06b6d4;"></span>
-              <span class="fav-item-name">Renk #2</span>
-            </div>
-            <div class="fav-item">
-              <span class="rank-badge">03</span>
-              <span class="color-dot" style="background: #10b981;"></span>
-              <span class="fav-item-name">Renk #3</span>
-            </div>
-            <div class="fav-item">
-              <span class="rank-badge">04</span>
-              <span class="color-dot" style="background: #a855f7;"></span>
-              <span class="fav-item-name">Renk #4</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Kutu 2: Sevdiğim Filmler -->
-        <div class="fav-card">
-          <div class="fav-card-header">
-            <span class="fav-icon">🎬</span>
-            <h2 class="fav-title">Sevdiğim Filmler</h2>
-          </div>
-          <div class="fav-list">
-            <div class="fav-item">
-              <span class="rank-badge">01</span>
-              <span class="fav-item-name">Film Adı #1</span>
-              <span class="fav-tag">Tür / Yıl</span>
-            </div>
-            <div class="fav-item">
-              <span class="rank-badge">02</span>
-              <span class="fav-item-name">Film Adı #2</span>
-              <span class="fav-tag">Tür / Yıl</span>
-            </div>
-            <div class="fav-item">
-              <span class="rank-badge">03</span>
-              <span class="fav-item-name">Film Adı #3</span>
-              <span class="fav-tag">Tür / Yıl</span>
-            </div>
-            <div class="fav-item">
-              <span class="rank-badge">04</span>
-              <span class="fav-item-name">Film Adı #4</span>
-              <span class="fav-tag">Tür / Yıl</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <!-- Kişisel Favoriler Bileşen Izgarası (Her Kategoriden 1 Seçim - data/about.js) -->
+      <div class="personal-grid" id="favorites-container"></div>
     </section>
   </main>
 
@@ -132,6 +71,7 @@
   <!-- Modüler JS Bileşenleri (< 200 Satır Kuralına Uygun) -->
   <script src="js/confetti.js"></script>
   <script src="js/particles.js"></script>
+  <script src="data/about.js"></script>
   <script src="js/components.js"></script>
 </body>
 </html>
