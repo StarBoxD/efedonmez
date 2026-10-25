@@ -54,7 +54,7 @@ const PROFILE_DATA = {
     {
       id: "muzik",
       size: "small",
-      badge: "🎧 Müzik",
+      badge: "Müzik",
       badgeColor: "purple",
       title: "Sürekli Çalanlar",
       description: "Gün içinde kulaklık neredeyse hiç çıkmaz. Rap, synthwave, rock ya da o an moduma ne uyuyorsa o çalar.",

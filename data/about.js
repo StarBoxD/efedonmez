@@ -1,41 +1,41 @@
-// Hakkımda Sayfası — Kişisel Favoriler & Filtreleme Bileşeni (< 90 Satır)
+// Hakkımda Sayfası — Kişisel Favoriler & Filtreleme Bileşeni (Minimalist & Emojisiz < 85 Satır)
 const PERSONAL_FAVORITES = [
-  { id: "renk", group: "zevkler", icon: "🎨", category: "Favori Renk", value: "Siyah & Pembe", sub: "Renk", color: "rose" },
-  { id: "aksesuar", group: "kisisel", icon: "🕶️", category: "Vazgeçilmez Aksesuarım", value: "Gözlük :D", sub: "Detay", color: "cyan" },
-  { id: "sayi", group: "kisisel", icon: "🎲", category: "Uğurlu Sayım", value: "7", sub: "Şans", color: "emerald" },
-  { id: "dogum", group: "kisisel", icon: "🎂", category: "Doğum Tarihi", value: "08.10.2004", sub: "Takvim", color: "purple" },
-  { id: "burc", group: "kisisel", icon: "♎", category: "Burç", value: "Terazi", sub: "Profil", color: "indigo" },
-  { id: "boy", group: "kisisel", icon: "📏", category: "Boy", value: "1.75 sanıyorum (Ölçmedim 1.78 olabilir)", sub: "Fiziksel", color: "cyan" },
-  { id: "memleket", group: "kisisel", icon: "🏠", category: "Memleket", value: "Hatay / İskenderun", sub: "Köken", color: "amber" },
-  { id: "sehir", group: "zevkler", icon: "🌍", category: "Favori Şehir / Ülke", value: "Türkiye / İskenderun", sub: "Rota", color: "emerald" },
-  { id: "bolum", group: "kisisel", icon: "🎓", category: "Bölümüm", value: "FTR (Fizik Tedavi)", sub: "Üniversite", color: "indigo" },
-  { id: "takim", group: "zevkler", icon: "🦅", category: "Tuttuğum Takım", value: "Beşiktaş (BJK)", sub: "Taraftar", color: "purple" },
-  { id: "sanatci", group: "oyunmuzik", icon: "🎤", category: "Favori Sanatçı", value: "Şehinşah", sub: "Müzik", color: "rose" },
-  { id: "muzik", group: "oyunmuzik", icon: "🎧", category: "Favori Şarkı / Müzik", value: "Moda Göre Her Şey", sub: "Ritim", color: "emerald" },
-  { id: "oyun", group: "oyunmuzik", icon: "🎮", category: "Favori Oyun", value: "LoL & Minecraft", sub: "Gaming", color: "amber" },
-  { id: "oyunturu", group: "oyunmuzik", icon: "🕹️", category: "Sevdiğim Oyun Tarzı", value: "MOBA & MMORPG", sub: "Rekabet", color: "indigo" },
-  { id: "izlenenspor", group: "oyunmuzik", icon: "🏆", category: "İzlemeyi Sevdiğim Spor", value: "E-Spor", sub: "Heyecan", color: "cyan" },
-  { id: "film", group: "zevkler", icon: "🎬", category: "Favori Film", value: "Süper Kahraman Filmleri & Her Şey", sub: "Sinema", color: "purple" },
-  { id: "yemek", group: "zevkler", icon: "🍽️", category: "Favori Yemek", value: "İçli Köfteli Çorba & Mantı", sub: "Mutfak", color: "amber" },
-  { id: "tatli", group: "zevkler", icon: "🍰", category: "Favori Tatlı", value: "Künefe", sub: "Lezzet", color: "rose" },
-  { id: "geceatistirma", group: "zevkler", icon: "🍕", category: "Gece Açlığı Favorisi", value: "Ankara'da Pizza, Hatay'da Döner", sub: "Atıştırmalık", color: "amber" },
-  { id: "icecek", group: "zevkler", icon: "🥤", category: "Favori İçecek", value: "Kola", sub: "Günlük", color: "rose" },
-  { id: "arac", group: "zevkler", icon: "🚗", category: "Favori Araç", value: "Camaro", sub: "Otomobil", color: "indigo" },
-  { id: "hayvan", group: "karakter", icon: "🐾", category: "Hayvanlarla Aram", value: "Kedi beni sahiplenir, köpeği ben", sub: "Doğa", color: "emerald" },
-  { id: "huy", group: "karakter", icon: "⚡", category: "En Belirgin Huyum", value: "Biri için her şeyi yaparım, kendim için üşenirim", sub: "Karakter", color: "purple" },
-  { id: "kirmizicizgi", group: "karakter", icon: "🚫", category: "Tahammül Edemediğim Şey", value: "Yalan", sub: "Kırmızı Çizgi", color: "rose" },
-  { id: "stil", group: "kisisel", icon: "👟", category: "Giyim Tarzım", value: "Üzerimde düzgün duruyorsa giyerim :D", sub: "Stil", color: "cyan" },
-  { id: "alarm", group: "karakter", icon: "⏰", category: "Sabah Alarmıyla Aram", value: "Alarmdan önce uyanıp onu uyandırırım", sub: "Rutin", color: "emerald" },
-  { id: "mod", group: "karakter", icon: "🌙", category: "Gece İnsanı mı Gündüz mü?", value: "Ders Yoksa Gececi", sub: "Biyoritim", color: "indigo" },
-  { id: "mevsim", group: "zevkler", icon: "❄️", category: "Favori Mevsim", value: "Kış", sub: "Atmosfer", color: "cyan" },
-  { id: "havadurumu", group: "zevkler", icon: "🌧️", category: "Favori Hava Durumu", value: "Yağmur", sub: "Atmosfer", color: "purple" },
-  { id: "sosyal", group: "karakter", icon: "🔋", category: "Sosyal Enerjim", value: "Genelde Yüksek", sub: "İletişim", color: "emerald" },
-  { id: "dogumlekesi", group: "kisisel", icon: "✨", category: "Doğum Leken Var mı?", value: "Var (Baya büyük)", sub: "Fiziksel", color: "rose" },
-  { id: "tik", group: "kisisel", icon: "🤫", category: "Tikim Var mı?", value: "Var (Ama bende kalsın)", sub: "Gizli Detay", color: "purple" },
-  { id: "deger", group: "karakter", icon: "🤝", category: "İnsanda En Önem Verdiğim Şey", value: "Samimiyet & Doğallık", sub: "Değer", color: "emerald" },
-  { id: "kafadinleme", group: "karakter", icon: "🏝️", category: "Kafa Dinleme Şeklim", value: "Müzik & Arkadaşlarla Oyun", sub: "Deşarj", color: "cyan" },
-  { id: "uygulama", group: "oyunmuzik", icon: "📱", category: "En Çok Kullandığım Uygulama", value: "Spotify & Instagram", sub: "Dijital", color: "indigo" },
-  { id: "motto", group: "karakter", icon: "🧭", category: "Hayat Mottom", value: "Nefes alıyorsan hâlâ bir şansın vardır", sub: "Felsefe", color: "amber" }
+  { id: "renk", group: "zevkler", category: "Favori Renk", value: "Siyah & Pembe", sub: "Renk", color: "rose" },
+  { id: "aksesuar", group: "kisisel", category: "Vazgeçilmez Aksesuarım", value: "Gözlük :D", sub: "Detay", color: "cyan" },
+  { id: "sayi", group: "kisisel", category: "Uğurlu Sayım", value: "7", sub: "Şans", color: "emerald" },
+  { id: "dogum", group: "kisisel", category: "Doğum Tarihi", value: "08.10.2004", sub: "Takvim", color: "purple" },
+  { id: "burc", group: "kisisel", category: "Burç", value: "Terazi", sub: "Profil", color: "indigo" },
+  { id: "boy", group: "kisisel", category: "Boy", value: "1.75 sanıyorum (Ölçmedim 1.78 olabilir)", sub: "Fiziksel", color: "cyan" },
+  { id: "memleket", group: "kisisel", category: "Memleket", value: "Hatay / İskenderun", sub: "Köken", color: "amber" },
+  { id: "sehir", group: "zevkler", category: "Favori Şehir / Ülke", value: "Türkiye / İskenderun", sub: "Rota", color: "emerald" },
+  { id: "bolum", group: "kisisel", category: "Bölümüm", value: "FTR (Fizik Tedavi)", sub: "Üniversite", color: "indigo" },
+  { id: "takim", group: "zevkler", category: "Tuttuğum Takım", value: "Beşiktaş (BJK)", sub: "Taraftar", color: "purple" },
+  { id: "sanatci", group: "oyunmuzik", category: "Favori Sanatçı", value: "Şehinşah", sub: "Müzik", color: "rose" },
+  { id: "muzik", group: "oyunmuzik", category: "Favori Şarkı / Müzik", value: "Moda Göre Her Şey", sub: "Ritim", color: "emerald" },
+  { id: "oyun", group: "oyunmuzik", category: "Favori Oyun", value: "LoL & Minecraft", sub: "Gaming", color: "amber" },
+  { id: "oyunturu", group: "oyunmuzik", category: "Sevdiğim Oyun Tarzı", value: "MOBA & MMORPG", sub: "Rekabet", color: "indigo" },
+  { id: "izlenenspor", group: "oyunmuzik", category: "İzlemeyi Sevdiğim Spor", value: "E-Spor", sub: "Heyecan", color: "cyan" },
+  { id: "film", group: "zevkler", category: "Favori Film", value: "Süper Kahraman Filmleri & Her Şey", sub: "Sinema", color: "purple" },
+  { id: "yemek", group: "zevkler", category: "Favori Yemek", value: "İçli Köfteli Çorba & Mantı", sub: "Mutfak", color: "amber" },
+  { id: "tatli", group: "zevkler", category: "Favori Tatlı", value: "Künefe", sub: "Lezzet", color: "rose" },
+  { id: "geceatistirma", group: "zevkler", category: "Gece Açlığı Favorisi", value: "Ankara'da Pizza, Hatay'da Döner", sub: "Atıştırmalık", color: "amber" },
+  { id: "icecek", group: "zevkler", category: "Favori İçecek", value: "Kola", sub: "Günlük", color: "rose" },
+  { id: "arac", group: "zevkler", category: "Favori Araç", value: "Camaro", sub: "Otomobil", color: "indigo" },
+  { id: "hayvan", group: "karakter", category: "Hayvanlarla Aram", value: "Kedi beni sahiplenir, köpeği ben", sub: "Doğa", color: "emerald" },
+  { id: "huy", group: "karakter", category: "En Belirgin Huyum", value: "Biri için her şeyi yaparım, kendim için üşenirim", sub: "Karakter", color: "purple" },
+  { id: "kirmizicizgi", group: "karakter", category: "Tahammül Edemediğim Şey", value: "Yalan", sub: "Kırmızı Çizgi", color: "rose" },
+  { id: "stil", group: "kisisel", category: "Giyim Tarzım", value: "Üzerimde düzgün duruyorsa giyerim :D", sub: "Stil", color: "cyan" },
+  { id: "alarm", group: "karakter", category: "Sabah Alarmıyla Aram", value: "Alarmdan önce uyanıp onu uyandırırım", sub: "Rutin", color: "emerald" },
+  { id: "mod", group: "karakter", category: "Gece İnsanı mı Gündüz mü?", value: "Ders Yoksa Gececi", sub: "Biyoritim", color: "indigo" },
+  { id: "mevsim", group: "zevkler", category: "Favori Mevsim", value: "Kış", sub: "Atmosfer", color: "cyan" },
+  { id: "havadurumu", group: "zevkler", category: "Favori Hava Durumu", value: "Yağmur", sub: "Atmosfer", color: "purple" },
+  { id: "sosyal", group: "karakter", category: "Sosyal Enerjim", value: "Genelde Yüksek", sub: "İletişim", color: "emerald" },
+  { id: "dogumlekesi", group: "kisisel", category: "Doğum Leken Var mı?", value: "Var (Baya büyük)", sub: "Fiziksel", color: "rose" },
+  { id: "tik", group: "kisisel", category: "Tikim Var mı?", value: "Var (Ama bende kalsın)", sub: "Gizli Detay", color: "purple" },
+  { id: "deger", group: "karakter", category: "İnsanda En Önem Verdiğim Şey", value: "Samimiyet & Doğallık", sub: "Değer", color: "emerald" },
+  { id: "kafadinleme", group: "karakter", category: "Kafa Dinleme Şeklim", value: "Müzik & Arkadaşlarla Oyun", sub: "Deşarj", color: "cyan" },
+  { id: "uygulama", group: "oyunmuzik", category: "En Çok Kullandığım Uygulama", value: "Spotify & Instagram", sub: "Dijital", color: "indigo" },
+  { id: "motto", group: "karakter", category: "Hayat Mottom", value: "Nefes alıyorsan hâlâ bir şansın vardır", sub: "Felsefe", color: "amber" }
 ];
 
 function renderPersonalFavorites(filterGroup = "all") {
@@ -51,7 +51,7 @@ function renderPersonalFavorites(filterGroup = "all") {
     return `
       <div class="personal-card spotlight-card stagger-item accent-${item.color}" style="--delay: ${Math.min(0.5, 0.02 + idx * 0.02)}s">
         <div class="p-card-top">
-          <span class="p-card-cat"><span class="p-card-icon">${item.icon}</span> ${item.category}</span>
+          <span class="p-card-cat"><span class="p-card-dot"></span> ${item.category}</span>
           <span class="p-card-num">#${num}</span>
         </div>
         <div class="p-card-body">
