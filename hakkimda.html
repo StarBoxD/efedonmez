@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="description" content="Efe Dönmez - Hakkımda, FTR eğitimi, spor rutini, müzik ve hayat felsefesi." />
+  <meta name="keywords" content="Efe Dönmez, Efe Dönmez kimdir, FTR öğrencisi, efedonmez" />
+  <link rel="canonical" href="https://efedonmez.com/hakkimda.html" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>Hakkımda — Efe Dönmez | efedonmez.com</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+  <!-- Fonts & Stiller (< 200 satır kuralına uygun ayrık CSS'ler) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/bento.css" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- Ambient Background Bileşeni -->
+  <canvas id="bg-particles" aria-hidden="true"></canvas>
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="cyber-grid"></div>
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+    <div class="glow-orb glow-orb-4"></div>
+  </div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Üst Navigasyon Bileşeni -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand-btn" aria-label="Ana Sayfa">
+        <span class="brand-dot"></span>Efe<span class="accent">Dönmez</span>
+      </a>
+      <nav class="nav-tabs">
+        <a href="index.html" class="tab-btn" id="nav-home"><span>✦</span> Ana Sayfa</a>
+        <a href="hakkimda.html" class="tab-btn active" id="nav-about"><span>✦</span> Hakkımda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="view-about" class="fade-in">
+      <div class="about-header">
+        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+        <h1 class="shimmer-title" style="font-size: clamp(1.8rem, 4vw, 2.4rem);">Hakkımda & Hikayem</h1>
+        <p class="hero-subtitle">Efe Dönmez • FTR & Yaşam Rutini</p>
+      </div>
+
+      <!-- Giriş Kartı -->
+      <div class="about-intro-card stagger-item" style="--delay: 0.1s">
+        <p class="about-intro-text">
+          Merhaba, ben <strong>Efe Dönmez</strong>. Üniversitede Fizik Tedavi ve Rehabilitasyon (FTR) bölümünde öğrenim görüyorum. İnsan anatomisi, kas-iskelet biyomekaniği ve fonksiyonel hareket kabiliyetini geliştirmek üzerine odaklanıyorum.
+        </p>
+        <p class="about-intro-text" style="color: var(--text-muted); font-size: 0.95rem;">
+          Teorik bilgiyi salonda pratik antrenman disipliniyle harmanlamayı seviyorum. Günün kalan zamanlarında ise iyi bir müzik listesi, arkadaşlarla rekabetçi oyunlar ve samimi sohbetler vazgeçilmezimdir.
+        </p>
+      </div>
+
+      <!-- Yaşam Değerleri & İlkeler -->
+      <div class="values-grid stagger-item" style="--delay: 0.2s">
+        <div class="value-card">
+          <div class="value-icon">⚡</div>
+          <h3 class="value-title">Disiplin & Hareket</h3>
+          <p class="value-desc">Vücudun sınırlarını keşfetmek, düzenli antrenman ve sağlıklı fiziksel gelişim en temel önceliğim.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🎧</div>
+          <h3 class="value-title">Müzik & Odak</h3>
+          <p class="value-desc">Çalışırken, antrenmandayken veya yürürken kulaklık daima takılı. Moduma göre değişen zengin bir müzik zevkim var.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3 class="value-title">Samimiyet</h3>
+          <p class="value-desc">Kasmayan, olduğu gibi davranan, dürüst ve kafa dengi insanlarla vakit geçirmek hayattaki en büyük keyif.</p>
+        </div>
+      </div>
+
+      <!-- Yolculuk & Eğitim Çizelgesi (Timeline) -->
+      <div class="timeline-section stagger-item" style="--delay: 0.3s">
+        <div class="section-title" style="margin-bottom: 0.5rem;">
+          <span>✦ Eğitim & Yolculuk</span>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-year">2024 - Günümüz</span>
+          <h4 class="timeline-title">Üniversite — Fizik Tedavi ve Rehabilitasyon (FTR)</h4>
+          <p class="timeline-desc">Anatomi, fizyoloji, kinezyoloji dersleri, klinik pratikler ve fiziksel rehabilitasyon teknikleri eğitimi.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-year">Sürekli Rutin</span>
+          <h4 class="timeline-title">Fonksiyonel Fitness & Antrenman</h4>
+          <p class="timeline-desc">Ağırlık çalışmaları, hareketlilik (mobility), esneklik ve kondisyon odaklı günlük antrenman disiplini.</p>
+        </div>
+      </div>
+
+      <!-- Detaylı Bento Kartları -->
+      <div class="section-header" style="margin-top: 2.5rem;">
+        <div class="section-title">
+          <span>✦ Odak Alanlarım & Kartlar</span>
+        </div>
+      </div>
+      <div class="bento-grid" id="bento-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Efe Dönmez • efedonmez.com</span>
+      <span>Tüm hakları saklıdır</span>
+    </div>
+  </footer>
+
+  <!-- Modüler JS Bileşenleri (< 200 Satır Kuralına Uygun) -->
+  <script src="js/confetti.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="data/profile.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

@@ -3,13 +3,19 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://efedonmez.com/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://efedonmez.com/assets/avatar.png</image:loc>
       <image:title>Efe Dönmez</image:title>
-      <image:caption>Efe Dönmez - FTR (Fizik Tedavi ve Rehabilitasyon) Öğrencisi | efedonmez.com</image:caption>
+      <image:caption>Efe Dönmez - FTR Öğrencisi | efedonmez.com</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://efedonmez.com/hakkimda.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
