@@ -62,8 +62,10 @@
 .typing-dot:nth-child(2) { animation-delay: 0.2s; } .typing-dot:nth-child(3) { animation-delay: 0.4s; }
 @keyframes typingBounce { 0%, 80%, 100% { transform: translateY(0); opacity: 0.4; } 40% { transform: translateY(-4px); opacity: 1; } }
 
-.game-ping { font-size: 1.1rem; display: inline-block; animation: controllerRock 2s ease-in-out infinite; }
-@keyframes controllerRock { 0%, 100% { transform: rotate(-8deg) scale(1); } 50% { transform: rotate(8deg) scale(1.15); } }
+.game-hud { display: inline-flex; align-items: center; gap: 6px; padding: 0.22rem 0.55rem; border-radius: 9999px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.28); }
+.crosshair-icon { width: 12px; height: 12px; border: 1.5px solid #fbbf24; border-radius: 50%; position: relative; display: inline-flex; align-items: center; justify-content: center; animation: spinHalo 6s linear infinite; }
+.crosshair-icon::after { content: ''; width: 3px; height: 3px; border-radius: 50%; background: #10b981; box-shadow: 0 0 6px #10b981; }
+.ping-text { font-size: 0.68rem; font-weight: 800; color: #fcd34d; letter-spacing: 0.02em; }
 
 .bento-title { font-size: 1.18rem; font-weight: 800; color: #fff; line-height: 1.35; }
 .bento-desc { font-size: 0.89rem; color: var(--text-muted); line-height: 1.62; }
