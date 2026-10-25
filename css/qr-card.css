@@ -1,0 +1,113 @@
+/* ==========================================================================
+   QR-CARD.CSS - Dijital Kartvizit, QR Modal & 404 Ekranı (Mobil Uyumlu < 130 Satır)
+   ========================================================================== */
+
+.qr-trigger-btn {
+  padding: 0.45rem 0.68rem !important;
+  min-width: 40px;
+  justify-content: center;
+  border: 1px solid rgba(129, 140, 248, 0.25) !important;
+  background: rgba(99, 102, 241, 0.1) !important;
+  color: #c7d2fe !important;
+}
+.qr-trigger-btn:hover {
+  background: rgba(99, 102, 241, 0.22) !important;
+  border-color: rgba(129, 140, 248, 0.55) !important;
+  color: #fff !important;
+}
+
+.qr-modal-backdrop {
+  position: fixed; inset: 0; z-index: 9990;
+  background: rgba(3, 3, 6, 0.78);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem; opacity: 0; pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.qr-modal-backdrop.open { opacity: 1; pointer-events: auto; }
+
+.qr-modal-card {
+  width: 100%; max-width: 360px;
+  background: linear-gradient(160deg, rgba(18, 18, 28, 0.97) 0%, rgba(10, 10, 16, 0.98) 100%);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  border-radius: 1.5rem; padding: 1.5rem 1.35rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(99, 102, 241, 0.2);
+  display: flex; flex-direction: column; align-items: center; gap: 1.1rem;
+  position: relative; transform: translateY(20px) scale(0.96);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.qr-modal-backdrop.open .qr-modal-card { transform: translateY(0) scale(1); }
+
+.qr-close-btn {
+  position: absolute; top: 0.9rem; right: 0.9rem;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #9ca3af; font-size: 1.1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s ease;
+}
+.qr-close-btn:hover { background: rgba(244, 63, 94, 0.2); color: #fff; border-color: rgba(244, 63, 94, 0.4); }
+
+.qr-profile-head { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.35rem; }
+.qr-avatar {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: linear-gradient(135deg, #1e1b4b, #0f172a);
+  border: 2px solid #818cf8; padding: 4px;
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.4);
+}
+.qr-avatar img { width: 100%; height: 100%; object-fit: contain; }
+.qr-name { font-size: 1.25rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-top: 0.2rem; }
+.qr-role { font-size: 0.78rem; font-weight: 600; color: var(--primary-light); }
+
+.qr-box {
+  padding: 0.75rem; border-radius: 1.15rem;
+  background: #0a0a12; border: 1.5px solid rgba(129, 140, 248, 0.35);
+  box-shadow: inset 0 0 20px rgba(99, 102, 241, 0.12), 0 8px 24px rgba(0, 0, 0, 0.4);
+  display: flex; align-items: center; justify-content: center;
+}
+.qr-box img { width: 176px; height: 176px; display: block; border-radius: 0.5rem; }
+
+.qr-domain-badge {
+  font-size: 0.78rem; font-weight: 700; color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.3rem 0.85rem; border-radius: 9999px; letter-spacing: 0.02em;
+}
+
+.qr-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; width: 100%; }
+.qr-btn {
+  min-height: 44px; padding: 0.6rem 0.8rem; border-radius: 0.85rem;
+  font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  cursor: pointer; transition: all 0.2s ease; text-decoration: none;
+  background: rgba(255, 255, 255, 0.06); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.qr-btn:hover { background: rgba(99, 102, 241, 0.2); color: #fff; border-color: rgba(129, 140, 248, 0.45); }
+.qr-btn.primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5); color: #fff;
+  border-color: rgba(165, 180, 252, 0.35);
+}
+
+/* 404 Ekranı Stilleri */
+.error-404-wrap {
+  min-height: 68vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  gap: 1rem; padding: 2rem 1rem;
+}
+.error-code {
+  font-size: clamp(4.5rem, 15vw, 7.5rem); font-weight: 900; line-height: 1;
+  letter-spacing: -0.05em;
+  background: linear-gradient(135deg, #818cf8 0%, #38bdf8 50%, #f43f5e 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.error-title { font-size: clamp(1.3rem, 4vw, 1.75rem); font-weight: 800; color: #fff; }
+.error-desc { font-size: 0.95rem; color: var(--text-muted); max-width: 420px; }
+
+/* Mobil Alt-Çekmece (Bottom-Sheet) Uyumluluğu */
+@media (max-width: 480px) {
+  .qr-modal-backdrop { align-items: flex-end; padding: 0; }
+  .qr-modal-card {
+    max-width: 100%; border-radius: 1.5rem 1.5rem 0 0;
+    padding: 1.5rem 1.25rem calc(1.5rem + var(--sab)) 1.25rem;
+    transform: translateY(100%);
+  }
+}

@@ -24,7 +24,6 @@ const server = http.createServer((req, res) => {
   let reqUrl = req.url.split('?')[0];
   if (reqUrl === '/' || reqUrl === '') reqUrl = '/index.html';
 
-
   try {
     reqUrl = decodeURIComponent(reqUrl);
   } catch (e) {}
@@ -35,19 +34,20 @@ const server = http.createServer((req, res) => {
   if (!safePath.toLowerCase().startsWith(__dirname.toLowerCase())) {
     res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('403 - Yasak');
-    console.log(`[403] ${req.method} ${req.url}`);
     return;
   }
 
   fs.stat(safePath, (statErr, stats) => {
     if (statErr || !stats.isFile()) {
-      const notFoundBody = '<h1>404 - Sayfa Bulunamadı</h1>';
-      res.writeHead(404, {
-        'Content-Type': 'text/html; charset=utf-8',
-        'Content-Length': Buffer.byteLength(notFoundBody)
+      const custom404Path = path.join(__dirname, '404.html');
+      fs.readFile(custom404Path, (err404, content404) => {
+        const body = !err404 ? content404 : '<h1>404 - Sayfa Bulunamadı</h1>';
+        res.writeHead(404, {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Content-Length': Buffer.byteLength(body)
+        });
+        res.end(body);
       });
-      res.end(notFoundBody);
-      console.log(`[404] ${req.method} ${req.url}`);
       return;
     }
 
@@ -62,7 +62,6 @@ const server = http.createServer((req, res) => {
           'Content-Length': Buffer.byteLength(errBody)
         });
         res.end(errBody);
-        console.log(`[500] ${req.method} ${req.url}`);
         return;
       }
 
@@ -72,7 +71,6 @@ const server = http.createServer((req, res) => {
         'Cache-Control': 'no-cache, no-store, must-revalidate'
       });
       res.end(content);
-      console.log(`[200] ${req.method} ${req.url} (${content.length} B)`);
     });
   });
 });
