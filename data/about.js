@@ -13,7 +13,7 @@ const PERSONAL_FAVORITES = [
   { id: "sanatci", icon: "🎤", category: "Favori Sanatçı", value: "Şehinşah", sub: "Müzik", color: "rose" },
   { id: "muzik", icon: "🎧", category: "Favori Şarkı / Müzik", value: "Moda Göre Her Şey", sub: "Ritim", color: "emerald" },
   { id: "oyun", icon: "🎮", category: "Favori Oyun", value: "LoL & Minecraft", sub: "Gaming", color: "amber" },
-  { id: "oyunturu", icon: "🕹️", category: "Sevdiğim Oyun Tarzı", value: "MOBA (LoL tarzı) & MMORPG — Her şeyi oynarım", sub: "Rekabet", color: "indigo" },
+  { id: "oyunturu", icon: "🕹️", category: "Sevdiğim Oyun Tarzı", value: "MOBA & MMORPG", sub: "Rekabet", color: "indigo" },
   { id: "izlenenspor", icon: "🏆", category: "İzlemeyi Sevdiğim Spor", value: "E-Spor", sub: "Heyecan", color: "cyan" },
   { id: "film", icon: "🎬", category: "Favori Film", value: "Süper Kahraman Filmleri & Her Şey", sub: "Sinema", color: "purple" },
   { id: "yemek", icon: "🍽️", category: "Favori Yemek", value: "İçli Köfteli Çorba & Mantı", sub: "Mutfak", color: "amber" },
