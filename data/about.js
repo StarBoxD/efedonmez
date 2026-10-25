@@ -1,4 +1,4 @@
-// Hakkımda Sayfası — Kişisel Favoriler & Karakter Kartları (Her Kategoriden 1 Seçim)
+// Hakkımda Sayfası — Kişisel Favoriler & Karakter Kartları (42 Kategori - < 80 Satır)
 const PERSONAL_FAVORITES = [
   { id: "renk", icon: "🎨", category: "Favori Renk", value: "Belirlenecek", sub: "Renk Tonu", color: "indigo", swatch: "#6366f1" },
   { id: "film", icon: "🎬", category: "Favori Film", value: "Belirlenecek", sub: "Sinema", color: "purple" },
@@ -20,7 +20,28 @@ const PERSONAL_FAVORITES = [
   { id: "fobi", icon: "⚡", category: "En Garip Huyum", value: "Belirlenecek", sub: "Karakter", color: "rose" },
   { id: "kafadinleme", icon: "🏝️", category: "Kafa Dinleme Şeklim", value: "Belirlenecek", sub: "Deşarj", color: "cyan" },
   { id: "sayi", icon: "🎲", category: "Uğurlu Sayım", value: "Belirlenecek", sub: "Şans", color: "emerald" },
-  { id: "burc", icon: "✨", category: "Burç", value: "Belirlenecek", sub: "Profil", color: "purple" }
+  { id: "burc", icon: "✨", category: "Burç", value: "Belirlenecek", sub: "Profil", color: "purple" },
+  { id: "boy", icon: "📏", category: "Boy", value: "Belirlenecek", sub: "Fiziksel", color: "indigo" },
+  { id: "dogum", icon: "🎂", category: "Doğum Günü", value: "Belirlenecek", sub: "Takvim", color: "rose" },
+  { id: "memleket", icon: "🏠", category: "Memleket / Şehir", value: "Belirlenecek", sub: "Konum", color: "cyan" },
+  { id: "bolum", icon: "🎓", category: "Bölümüm", value: "FTR (Fizik Tedavi)", sub: "Üniversite", color: "indigo" },
+  { id: "anatomi", icon: "🦴", category: "Favori Mesleki Ders / Konu", value: "Belirlenecek", sub: "FTR & Anatomi", color: "emerald" },
+  { id: "takim", icon: "🏆", category: "Tuttuğum Takım", value: "Belirlenecek", sub: "Taraftar", color: "amber" },
+  { id: "izlenenspor", icon: "🥊", category: "İzlemeyi Sevdiğim Spor", value: "Belirlenecek", sub: "Heyecan", color: "rose" },
+  { id: "muzikturu", icon: "🎸", category: "En Sevdiğim Müzik Türü", value: "Belirlenecek", sub: "Ritim", color: "purple" },
+  { id: "tatli", icon: "🍰", category: "Favori Tatlı", value: "Belirlenecek", sub: "Lezzet", color: "amber" },
+  { id: "geceatistirma", icon: "🍕", category: "Gece Açlığı Favorisi", value: "Belirlenecek", sub: "Atıştırmalık", color: "rose" },
+  { id: "stil", icon: "👟", category: "Giyim Tarzım", value: "Belirlenecek", sub: "Stil", color: "indigo" },
+  { id: "aksesuar", icon: "⌚", category: "Vazgeçilmez Aksesuarım", value: "Belirlenecek", sub: "Detay", color: "cyan" },
+  { id: "uygulama", icon: "📱", category: "En Çok Kullandığım Uygulama", value: "Belirlenecek", sub: "Dijital", color: "emerald" },
+  { id: "platform", icon: "💻", category: "Oyun Platformu Tercihim", value: "Belirlenecek", sub: "Donanım", color: "purple" },
+  { id: "oyunturu", icon: "🕹️", category: "En Sevdiğim Oyun Türü", value: "Belirlenecek", sub: "Rekabet", color: "amber" },
+  { id: "tatil", icon: "🏖️", category: "Tatil Tercihim", value: "Belirlenecek", sub: "Dinlenme", color: "cyan" },
+  { id: "havadurumu", icon: "🌧️", category: "Favori Hava Durumu", value: "Belirlenecek", sub: "Atmosfer", color: "indigo" },
+  { id: "deger", icon: "🤝", category: "İnsanda En Önem Verdiğim Şey", value: "Belirlenecek", sub: "Değer", color: "emerald" },
+  { id: "sosyal", icon: "🔋", category: "Sosyal Enerjim", value: "Belirlenecek", sub: "İletişim", color: "purple" },
+  { id: "alarm", icon: "⏰", category: "Sabah Alarmıyla Aram", value: "Belirlenecek", sub: "Rutin", color: "rose" },
+  { id: "motto", icon: "🧭", category: "Hayat Mottom", value: "Belirlenecek", sub: "Felsefe", color: "amber" }
 ];
 
 function renderPersonalFavorites() {
@@ -34,7 +55,7 @@ function renderPersonalFavorites() {
       : "";
 
     return `
-      <div class="personal-card spotlight-card stagger-item accent-${item.color}" style="--delay: ${0.04 + idx * 0.03}s">
+      <div class="personal-card spotlight-card stagger-item accent-${item.color}" style="--delay: ${Math.min(0.8, 0.03 + idx * 0.02)}s">
         <div class="p-card-top">
           <span class="p-card-cat"><span class="p-card-icon">${item.icon}</span> ${item.category}</span>
           <span class="p-card-num">#${num}</span>
